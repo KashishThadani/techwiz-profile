@@ -8,13 +8,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            /* Main background is black */
             background-color: #000000;
+            font-family: 'Inter', sans-serif;
+            color: #FFFFFF; /* Default text color for the body is now white for visibility on black sections */
         }
         .section-title {
             position: relative;
             font-weight: 700;
-            color: #2c3e50;
+            color: #FFFFFF; /* Changed to white for visibility on black sections */
             padding-bottom: 0.75rem;
             margin-bottom: 2rem;
         }
@@ -25,18 +27,22 @@
             bottom: 0;
             width: 60px;
             height: 4px;
-            background-color: #3498db;
+            background-color: #3498db; /* Remains blue for accent */
             border-radius: 2px;
+        }
+        /* Style for inner cards that might have lighter backgrounds, ensuring their text is still readable */
+        .card-text-dark {
+            color: #2c3e50; /* Dark color for text on light cards */
         }
     </style>
 </head>
-<body class="text-gray-800">
+<body class="text-white"> <!-- Changed default body text color to white -->
 
     <!-- Header Section -->
     <header class="bg-black text-white py-8 shadow-lg">
         <!-- Flex container for logo and centered text -->
         <div class="container mx-auto px-4 flex items-center relative">
-            <!-- Company Logo - Smaller and left-aligned -->
+            <!-- Company Logo - Sized and left-aligned -->
             <img src="https://raw.githubusercontent.com/KashishThadani/techwiz-profile/main/blackbglogo.jpg" alt="Techwiz Solution Logo" class="rounded-lg h-24 w-auto mr-4">
 
             <!-- Centered company name and line - positioned absolutely to center horizontally -->
@@ -48,44 +54,46 @@
     </header>
 
     <!-- About Us Section -->
-    <section id="about" class="py-16 bg-black shadow-md rounded-lg mx-auto my-8 max-w-7xl px-4 border border-gray-300">
+    <section id="about" class="py-16 bg-black shadow-md rounded-lg mx-auto my-8 max-w-7xl px-4 border border-gray-700"> <!-- Changed bg to black, border to gray-700 -->
         <div class="container mx-auto">
             <h2 class="text-4xl section-title mb-8">About Us</h2>
             <div class="grid md:grid-cols-2 gap-10 items-center">
                 <div>
-                    <p class="mb-4 leading-relaxed text-lg">
+                    <p class="mb-4 leading-relaxed text-gray-200"> <!-- Specific text color for readability -->
                         At Techwiz Solution, we specialize in offering expert e-commerce account management services across top online platforms like Flipkart, Amazon, Meesho, JioMart, Ajio, and Shopify. Our mission is to help sellers optimize their presence, streamline operations, and grow their brands in the ever-evolving digital marketplace.
                     </p>
-                    <p class="mb-4 leading-relaxed text-lg">
+                    <p class="mb-4 leading-relaxed text-gray-200"> <!-- Specific text color for readability -->
                         Our goal is to empower e-commerce sellers with the tools, strategies, and support needed to unlock their full potential in the competitive online market. With a focus on personalized service and measurable growth, we're here to take your brand to the next level.
                     </p>
-                    <p class="leading-relaxed text-lg">
+                    <p class="leading-relaxed text-gray-200"> <!-- Specific text color for readability -->
                         Whether you're looking to increase visibility, boost sales, or expand into new markets, we are here to help you every step of the way.
                     </p>
                 </div>
                 <div class="flex justify-center items-center">
-                    <img src="https://placehold.co/600x400/e0e7ff/000000?text=Team+Collaboration" alt="Team Collaboration" class="rounded-xl shadow-xl w-full h-auto object-cover">
+                    <!-- Updated placeholder image for dark theme -->
+                    <img src="https://placehold.co/600x400/333333/FFFFFF?text=Team+Collaboration" alt="Team Collaboration" class="rounded-xl shadow-xl w-full h-auto object-cover">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Vision & Mission Section -->
-    <section id="vision-mission" class="py-16 bg-blue-50 text-gray-800 rounded-lg mx-auto my-8 max-w-7xl px-4">
+    <section id="vision-mission" class="py-16 bg-black text-white rounded-lg mx-auto my-8 max-w-7xl px-4 border border-gray-700"> <!-- Changed bg to black, border to gray-700 -->
         <div class="container mx-auto">
             <h2 class="text-4xl section-title mb-8">Vision & Mission</h2>
             <div class="grid md:grid-cols-2 gap-10 items-center">
                 <div class="flex justify-center items-center order-2 md:order-1">
-                    <img src="https://placehold.co/600x400/cfe2f3/000000?text=Success+Together" alt="Success Together" class="rounded-xl shadow-xl w-full h-auto object-cover">
+                    <!-- Updated placeholder image for dark theme -->
+                    <img src="https://placehold.co/600x400/333333/FFFFFF?text=Success+Together" alt="Success Together" class="rounded-xl shadow-xl w-full h-auto object-cover">
                 </div>
                 <div class="order-1 md:order-2">
-                    <p class="mb-4 leading-relaxed text-lg">
+                    <p class="mb-4 leading-relaxed text-gray-200"> <!-- Specific text color for readability -->
                         Our team of category professionals works closely with sellers to develop customized strategies for each platform, ensuring that every account is tailored for maximum success. Whether it's managing product listings, improving visibility, optimizing ad campaigns, or enhancing customer engagement, we provide end-to-end solutions to elevate your brand.
                     </p>
-                    <p class="mb-4 leading-relaxed text-lg">
+                    <p class="mb-4 leading-relaxed text-gray-200"> <!-- Specific text color for readability -->
                         In addition to our account management services, we've recently launched a new Indian dropshipping business to further expand growth opportunities for our clients. This addition allows us to offer a streamlined approach for sellers who want to scale quickly without the hassle of managing inventory, all while ensuring the highest standards of quality and service.
                     </p>
-                    <p class="font-semibold text-lg text-blue-700">
+                    <p class="font-semibold text-lg text-blue-300"> <!-- Adjusted blue shade for better visibility on black -->
                         Partner with us, and let's achieve e-commerce success together.
                     </p>
                 </div>
@@ -94,47 +102,48 @@
     </section>
 
     <!-- How We Work Section -->
-    <section id="how-we-work" class="py-16 bg-white shadow-md rounded-lg mx-auto my-8 max-w-7xl px-4">
+    <section id="how-we-work" class="py-16 bg-black shadow-md rounded-lg mx-auto my-8 max-w-7xl px-4 border border-gray-700"> <!-- Changed bg to black, border to gray-700 -->
         <div class="container mx-auto">
             <h2 class="text-4xl section-title mb-8">How We Work</h2>
             <div class="grid md:grid-cols-2 gap-10 items-center">
                 <div>
-                    <p class="mb-6 leading-relaxed text-lg">
+                    <p class="mb-6 leading-relaxed text-gray-200"> <!-- Specific text color for readability -->
                         We are dedicated to driving measurable growth, providing continuous support, and empowering sellers to thrive in the competitive e-commerce landscape. Our approach involves:
                     </p>
-                    <ul class="list-disc list-inside space-y-3 text-lg">
+                    <ul class="list-disc list-inside space-y-3 text-gray-200"> <!-- Specific text color for readability -->
                         <li>
-                            <strong class="text-blue-600">Optimized Product Listings:</strong> We create and optimize high-converting product listings that align with platform algorithms, ensuring they reach your target audience effectively.
+                            <strong class="text-blue-300">Optimized Product Listings:</strong> We create and optimize high-converting product listings that align with platform algorithms, ensuring they reach your target audience effectively.
                         </li>
                         <li>
-                            <strong class="text-blue-600">Inventory Management:</strong> Our team handles inventory tracking, stock updates, and supply chain management, making sure your products are always available and well-represented.
+                            <strong class="text-blue-300">Inventory Management:</strong> Our team handles inventory tracking, stock updates, and supply chain management, making sure your products are always available and well-represented.
                         </li>
                         <li>
-                            <strong class="text-blue-600">Strategic Advertising:</strong> We develop and execute performance-driven advertising campaigns that increase visibility and drive targeted traffic, helping you get the most out of your ad spend.
+                            <strong class="text-blue-300">Strategic Advertising:</strong> We develop and execute performance-driven advertising campaigns that increase visibility and drive targeted traffic, helping you get the most out of your ad spend.
                         </li>
                         <li>
-                            <strong class="text-blue-600">Sales Analytics & Performance Tracking:</strong> By analyzing data and performance metrics, we provide insights and actionable strategies to continuously improve sales and profitability.
+                            <strong class="text-blue-300">Sales Analytics & Performance Tracking:</strong> By analyzing data and performance metrics, we provide insights and actionable strategies to continuously improve sales and profitability.
                         </li>
                     </ul>
                 </div>
                 <div class="flex justify-center items-center">
-                    <img src="https://placehold.co/600x400/e0e7ff/000000?text=Working+Process" alt="Working Process" class="rounded-xl shadow-xl w-full h-auto object-cover">
+                    <!-- Updated placeholder image for dark theme -->
+                    <img src="https://placehold.co/600x400/333333/FFFFFF?text=Working+Process" alt="Working Process" class="rounded-xl shadow-xl w-full h-auto object-cover">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Our Services Section -->
-    <section id="services" class="py-16 bg-blue-50 text-gray-800 rounded-lg mx-auto my-8 max-w-7xl px-4">
+    <section id="services" class="py-16 bg-black text-white rounded-lg mx-auto my-8 max-w-7xl px-4 border border-gray-700"> <!-- Changed bg to black, border to gray-700 -->
         <div class="container mx-auto">
             <h2 class="text-4xl section-title mb-8">Our Services</h2>
 
             <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
 
                 <!-- Flipkart Account Management -->
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                    <h3 class="text-2xl font-bold text-blue-700 mb-4">Flipkart Account Management</h3>
-                    <ul class="list-disc list-inside space-y-2 text-md">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-gray-300">
+                    <h3 class="text-2xl font-bold text-blue-700 mb-4 card-text-dark">Flipkart Account Management</h3>
+                    <ul class="list-disc list-inside space-y-2 text-md card-text-dark">
                         <li>Minimum 200 NEW LISTING</li>
                         <li>LISTING OPTIMIZATION</li>
                         <li>ACCOUNT HEALTH MANAGEMENT</li>
@@ -153,9 +162,9 @@
                 </div>
 
                 <!-- Amazon Account Management -->
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                    <h3 class="text-2xl font-bold text-orange-600 mb-4">Amazon Account Management</h3>
-                    <ul class="list-disc list-inside space-y-2 text-md">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-gray-300">
+                    <h3 class="text-2xl font-bold text-orange-600 mb-4 card-text-dark">Amazon Account Management</h3>
+                    <ul class="list-disc list-inside space-y-2 text-md card-text-dark">
                         <li>Minimum 200 NEW LISTING</li>
                         <li>3A+ LISTING</li>
                         <li>LISTING OPTIMIZATION</li>
@@ -174,9 +183,9 @@
                 </div>
 
                 <!-- Meesho Account Management -->
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                    <h3 class="text-2xl font-bold text-green-700 mb-4">Meesho Account Management</h3>
-                    <ul class="list-disc list-inside space-y-2 text-md">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-gray-300">
+                    <h3 class="text-2xl font-bold text-green-700 mb-4 card-text-dark">Meesho Account Management</h3>
+                    <ul class="list-disc list-inside space-y-2 text-md card-text-dark">
                         <li>200+ NEW LISTING</li>
                         <li>LISTING OPTIMIZATION</li>
                         <li>ACCOUNT HEALTH MANAGEMENT</li>
@@ -192,9 +201,9 @@
                 </div>
 
                 <!-- Indian Dropshipping -->
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                    <h3 class="text-2xl font-bold text-purple-700 mb-4">Indian Dropshipping</h3>
-                    <ul class="list-disc list-inside space-y-2 text-md">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-gray-300">
+                    <h3 class="text-2xl font-bold text-purple-700 mb-4 card-text-dark">Indian Dropshipping</h3>
+                    <ul class="list-disc list-inside space-y-2 text-md card-text-dark">
                         <li>ONBOARDING PROCESS</li>
                         <li>INTRODUCTION</li>
                         <li>FULL MANAGEMENT</li>
@@ -212,9 +221,9 @@
                 </div>
 
                 <!-- Graphic Designer -->
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                    <h3 class="text-2xl font-bold text-red-600 mb-4">Graphic Design</h3>
-                    <p class="mb-4 leading-relaxed text-md">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-gray-300">
+                    <h3 class="text-2xl font-bold text-red-600 mb-4 card-text-dark">Graphic Design</h3>
+                    <p class="mb-4 leading-relaxed text-md card-text-dark">
                         At Techwiz Solutions, our talented Graphic Design Team is dedicated to bringing your brand's visual identity to life. Whether you need eye-catching product images, engaging banners, or creative marketing materials, our designers are here to help you stand out in the competitive e-commerce landscape.
                     </p>
                 </div>
@@ -223,99 +232,91 @@
     </section>
 
     <!-- Meet the Team Section -->
-    <section id="team" class="py-16 bg-white shadow-md rounded-lg mx-auto my-8 max-w-7xl px-4">
+    <section id="team" class="py-16 bg-black shadow-md rounded-lg mx-auto my-8 max-w-7xl px-4 border border-gray-700"> <!-- Changed bg to black, border to gray-700 -->
         <div class="container mx-auto">
             <h2 class="text-4xl section-title mb-8">Meet The Team</h2>
-            <p class="text-lg mb-8 leading-relaxed">
+            <p class="text-lg mb-8 leading-relaxed text-gray-200"> <!-- Specific text color for readability -->
                 At Techwiz Solution, our strength lies in the collective expertise and dedication of our team. Each member brings a unique set of skills and experience to the table, ensuring that we provide the highest quality of service to our clients. We are a group of passionate professionals committed to helping e-commerce sellers grow, optimize, and scale their businesses.
             </p>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                <!-- Rahul Dwivedi -->
-                <div class="bg-gray-100 p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow duration-300">
-                    <img src="https://placehold.co/150x150/d1d5db/000000?text=Rahul" alt="Rahul Dwivedi" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-400">
-                    <h4 class="text-xl font-semibold">Rahul Dwivedi</h4>
-                    <p class="text-blue-600 text-sm mb-2">MEESHO ACCOUNT MANAGER</p>
-                    <p class="text-sm text-gray-600">Focuses on helping clients thrive on Meesho, managing everything from product listings to promotional strategies. Ensures every product shines in the competitive marketplace.</p>
+                <!-- Team member cards -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow duration-300 border border-gray-700"> <!-- Changed bg to gray-800, border to gray-700 -->
+                    <img src="https://placehold.co/150x150/555555/FFFFFF?text=Rahul" alt="Rahul Dwivedi" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-500"> <!-- Adjusted placeholder and border color -->
+                    <h4 class="text-xl font-semibold text-white">Rahul Dwivedi</h4> <!-- Ensure text is white -->
+                    <p class="text-blue-300 text-sm mb-2">MEESHO ACCOUNT MANAGER</p> <!-- Adjusted blue for better contrast -->
+                    <p class="text-sm text-gray-200">Focuses on helping clients thrive on Meesho, managing everything from product listings to promotional strategies. Ensures every product shines in the competitive marketplace.</p> <!-- Ensure text is light gray -->
                 </div>
 
-                <!-- Mohit Thadani -->
-                <div class="bg-gray-100 p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow duration-300">
-                    <img src="https://placehold.co/150x150/d1d5db/000000?text=Mohit" alt="Mohit Thadani" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-400">
-                    <h4 class="text-xl font-semibold">Mohit Thadani</h4>
-                    <p class="text-blue-600 text-sm mb-2">SENIOR ASSOCIATE & FLIPKART ACCOUNT MANAGER</p>
-                    <p class="text-sm text-gray-600">Brings a wealth of knowledge to optimize client accounts on Flipkart, ensuring each account achieves its full potential. Helps enhance product visibility, sales, and overall growth.</p>
+                <div class="bg-gray-800 p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow duration-300 border border-gray-700"> <!-- Changed bg to gray-800, border to gray-700 -->
+                    <img src="https://placehold.co/150x150/555555/FFFFFF?text=Mohit" alt="Mohit Thadani" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-500">
+                    <h4 class="text-xl font-semibold text-white">Mohit Thadani</h4>
+                    <p class="text-blue-300 text-sm mb-2">SENIOR ASSOCIATE & FLIPKART ACCOUNT MANAGER</p>
+                    <p class="text-sm text-gray-200">Brings a wealth of knowledge to optimize client accounts on Flipkart, ensuring each account achieves its full potential. Helps enhance product visibility, sales, and overall growth.</p>
                 </div>
 
-                <!-- Manoviraj Singh -->
-                <div class="bg-gray-100 p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow duration-300">
-                    <img src="https://placehold.co/150x150/d1d5db/000000?text=Manoviraj" alt="Manoviraj Singh" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-400">
-                    <h4 class="text-xl font-semibold">Manoviraj Singh</h4>
-                    <p class="text-blue-600 text-sm mb-2">SENIOR ASSOCIATE & FLIPKART ACCOUNT MANAGER</p>
-                    <p class="text-sm text-gray-600">Works hand-in-hand with Mohit, managing and optimizing client accounts on Flipkart. Responsible for streamlining processes and implementing data-driven strategies for measurable results.</p>
+                <div class="bg-gray-800 p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow duration-300 border border-gray-700"> <!-- Changed bg to gray-800, border to gray-700 -->
+                    <img src="https://placehold.co/150x150/555555/FFFFFF?text=Manoviraj" alt="Manoviraj Singh" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-500">
+                    <h4 class="text-xl font-semibold text-white">Manoviraj Singh</h4>
+                    <p class="text-blue-300 text-sm mb-2">SENIOR ASSOCIATE & FLIPKART ACCOUNT MANAGER</p>
+                    <p class="text-sm text-gray-200">Works hand-in-hand with Mohit, managing and optimizing client accounts on Flipkart. Responsible for streamlining processes and implementing data-driven strategies for measurable results.</p>
                 </div>
 
-                <!-- Komal Awasthi -->
-                <div class="bg-gray-100 p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow duration-300">
-                    <img src="https://placehold.co/150x150/d1d5db/000000?text=Komal" alt="Komal Awasthi" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-400">
-                    <h4 class="text-xl font-semibold">Komal Awasthi</h4>
-                    <p class="text-blue-600 text-sm mb-2">MEESHO ACCOUNT MANAGER</p>
-                    <p class="text-sm text-gray-600">Our go-to Meesho Account Manager with extensive experience in boosting product visibility and managing advertising. Ensures accounts are always performing and growing.</p>
+                <div class="bg-gray-800 p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow duration-300 border border-gray-700"> <!-- Changed bg to gray-800, border to gray-700 -->
+                    <img src="https://placehold.co/150x150/555555/FFFFFF?text=Komal" alt="Komal Awasthi" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-500">
+                    <h4 class="text-xl font-semibold text-white">Komal Awasthi</h4>
+                    <p class="text-blue-300 text-sm mb-2">MEESHO ACCOUNT MANAGER</p>
+                    <p class="text-sm text-gray-200">Our go-to Meesho Account Manager with extensive experience in boosting product visibility and managing advertising. Ensures accounts are always performing and growing.</p>
                 </div>
 
-                <!-- Sachin Mansare -->
-                <div class="bg-gray-100 p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow duration-300">
-                    <img src="https://placehold.co/150x150/d1d5db/000000?text=Sachin" alt="Sachin Mansare" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-400">
-                    <h4 class="text-xl font-semibold">Sachin Mansare</h4>
-                    <p class="text-blue-600 text-sm mb-2">MEESHO ACCOUNT MANAGER</p>
-                    <p class="text-sm text-gray-600">Excels in driving sales growth and optimizing e-commerce strategies. Provides personalized insights and content optimization for clients to boost visibility and sales.</p>
+                <div class="bg-gray-800 p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow duration-300 border border-gray-700"> <!-- Changed bg to gray-800, border to gray-700 -->
+                    <img src="https://placehold.co/150x150/555555/FFFFFF?text=Sachin" alt="Sachin Mansare" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-500">
+                    <h4 class="text-xl font-semibold text-white">Sachin Mansare</h4>
+                    <p class="text-blue-300 text-sm mb-2">MEESHO ACCOUNT MANAGER</p>
+                    <p class="text-sm text-gray-200">Excels in driving sales growth and optimizing e-commerce strategies. Provides personalized insights and content optimization for clients to boost visibility and sales.</p>
                 </div>
 
-                <!-- Annu Chawda -->
-                <div class="bg-gray-100 p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow duration-300">
-                    <img src="https://placehold.co/150x150/d1d5db/000000?text=Annu" alt="Annu Chawda" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-400">
-                    <h4 class="text-xl font-semibold">Annu Chawda</h4>
-                    <p class="text-blue-600 text-sm mb-2">AMAZON ACCOUNT MANAGER</p>
-                    <p class="text-sm text-gray-600">Expert Amazon Account Manager specializing in optimizing product listings, handling promotions, and ensuring smooth account operations on the Amazon platform.</p>
+                <div class="bg-gray-800 p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow duration-300 border border-gray-700"> <!-- Changed bg to gray-800, border to gray-700 -->
+                    <img src="https://placehold.co/150x150/555555/FFFFFF?text=Annu" alt="Annu Chawda" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-500">
+                    <h4 class="text-xl font-semibold text-white">Annu Chawda</h4>
+                    <p class="text-blue-300 text-sm mb-2">AMAZON ACCOUNT MANAGER</p>
+                    <p class="text-sm text-gray-200">Expert Amazon Account Manager specializing in optimizing product listings, handling promotions, and ensuring smooth account operations on the Amazon platform.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="py-16 bg-blue-50 text-gray-800 rounded-lg mx-auto my-8 max-w-7xl px-4">
+    <section id="pricing" class="py-16 bg-black text-white rounded-lg mx-auto my-8 max-w-7xl px-4 border border-gray-700"> <!-- Changed bg to black, border to gray-700 -->
         <div class="container mx-auto">
             <h2 class="text-4xl section-title mb-8">Our Pricing</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Flipkart Pricing -->
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center border-t-4 border-blue-600 hover:scale-105 transition-transform duration-300">
-                    <h3 class="text-2xl font-bold text-blue-700 mb-4">Flipkart Full Management</h3>
-                    <p class="text-4xl font-extrabold mb-4">₹2500<span class="text-xl font-normal">/month</span></p>
-                    <p class="text-lg mb-6">Or ₹6000 for 3 months</p>
+                <!-- Pricing cards -->
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center border-t-4 border-blue-600 hover:scale-105 transition-transform duration-300 border border-gray-300">
+                    <h3 class="text-2xl font-bold text-blue-700 mb-4 card-text-dark">Flipkart Full Management</h3>
+                    <p class="text-4xl font-extrabold mb-4 card-text-dark">₹2500<span class="text-xl font-normal">/month</span></p>
+                    <p class="text-lg mb-6 card-text-dark">Or ₹6000 for 3 months</p>
                     <button class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors duration-300 shadow-md">Join Now!</button>
                 </div>
 
-                <!-- Amazon Pricing -->
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center border-t-4 border-orange-600 hover:scale-105 transition-transform duration-300">
-                    <h3 class="text-2xl font-bold text-orange-600 mb-4">Amazon Full Management</h3>
-                    <p class="text-4xl font-extrabold mb-4">₹3000<span class="text-xl font-normal">/month</span></p>
-                    <p class="text-lg mb-6">Or ₹7500 for 3 months</p>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center border-t-4 border-orange-600 hover:scale-105 transition-transform duration-300 border border-gray-300">
+                    <h3 class="text-2xl font-bold text-orange-600 mb-4 card-text-dark">Amazon Full Management</h3>
+                    <p class="text-4xl font-extrabold mb-4 card-text-dark">₹3000<span class="text-xl font-normal">/month</span></p>
+                    <p class="text-lg mb-6 card-text-dark">Or ₹7500 for 3 months</p>
                     <button class="bg-orange-600 text-white px-6 py-3 rounded-full hover:bg-orange-700 transition-colors duration-300 shadow-md">Join Now!</button>
                 </div>
 
-                <!-- Meesho Pricing -->
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center border-t-4 border-green-600 hover:scale-105 transition-transform duration-300">
-                    <h3 class="text-2xl font-bold text-green-700 mb-4">Meesho Full Management</h3>
-                    <p class="text-4xl font-extrabold mb-4">₹2000<span class="text-xl font-normal">/month</span></p>
-                    <p class="text-lg mb-6">Or ₹5000 for 3 months</p>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center border-t-4 border-green-600 hover:scale-105 transition-transform duration-300 border border-gray-300">
+                    <h3 class="text-2xl font-bold text-green-700 mb-4 card-text-dark">Meesho Full Management</h3>
+                    <p class="text-4xl font-extrabold mb-4 card-text-dark">₹2000<span class="text-xl font-normal">/month</span></p>
+                    <p class="text-lg mb-6 card-text-dark">Or ₹5000 for 3 months</p>
                     <button class="bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 transition-colors duration-300 shadow-md">Join Now!</button>
                 </div>
 
-                <!-- Dropshipping Pricing -->
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center border-t-4 border-purple-600 hover:scale-105 transition-transform duration-300">
-                    <h3 class="text-2xl font-bold text-purple-700 mb-4">Indian Dropshipping</h3>
-                    <p class="text-4xl font-extrabold mb-4">₹1000<span class="text-xl font-normal">/month</span></p>
-                    <p class="text-lg mb-6">+3% Commission on Final Sale</p>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center border-t-4 border-purple-600 hover:scale-105 transition-transform duration-300 border border-gray-300">
+                    <h3 class="text-2xl font-bold text-purple-700 mb-4 card-text-dark">Indian Dropshipping</h3>
+                    <p class="text-4xl font-extrabold mb-4 card-text-dark">₹1000<span class="text-xl font-normal">/month</span></p>
+                    <p class="text-lg mb-6 card-text-dark">+3% Commission on Final Sale</p>
                     <button class="bg-purple-600 text-white px-6 py-3 rounded-full hover:bg-purple-700 transition-colors duration-300 shadow-md">Join Now!</button>
                 </div>
             </div>
@@ -323,21 +324,22 @@
     </section>
 
     <!-- Contact Us Section -->
-    <section id="contact" class="py-16 bg-gradient-to-r from-blue-700 to-indigo-800 text-white rounded-lg mx-auto my-8 max-w-7xl px-4">
+    <section id="contact" class="py-16 bg-black text-white rounded-lg mx-auto my-8 max-w-7xl px-4 border border-gray-700"> <!-- Changed bg to black, border to gray-700 -->
         <div class="container mx-auto text-center">
             <h2 class="text-4xl font-bold mb-8">Let's Connect With Us!</h2>
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                    <p class="text-xl mb-4"><strong class="text-blue-200">Phone:</strong> +91 7909904369</p>
-                    <p class="text-xl mb-4"><strong class="text-blue-200">E-Mail:</strong> care.techwizsolution@gmail.com</p>
-                    <p class="text-xl mb-4"><strong class="text-blue-200">Website:</strong> <a href="www.techwizsolution.co.in" class="text-white hover:underline">www.techwizsolution.co.in</a></p>
-                    <p class="text-xl mb-4"><strong class="text-blue-200">Address:</strong> Indore, Madhya Pradesh, 452010</p>
+                    <p class="text-xl mb-4"><strong class="text-blue-300">Phone:</strong> +91 7909904369</p>
+                    <p class="text-xl mb-4"><strong class="text-blue-300">E-Mail:</strong> care.techwizsolution@gmail.com</p>
+                    <p class="text-xl mb-4"><strong class="text-blue-300">Website:</strong> <a href="www.techwizsolution.co.in" class="text-white hover:underline">www.techwizsolution.co.in</a></p>
+                    <p class="text-xl mb-4"><strong class="text-blue-300">Address:</strong> Indore, Madhya Pradesh, 452010</p>
                     <button class="bg-white text-blue-700 px-8 py-4 rounded-full text-xl font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg mt-6">
                         Schedule a Free Consultation
                     </button>
                 </div>
                 <div class="flex justify-center">
-                    <img src="https://placehold.co/400x300/a7d9ff/000000?text=Contact+Us" alt="Contact Us" class="rounded-xl shadow-xl">
+                    <!-- Updated placeholder image for dark theme -->
+                    <img src="https://placehold.co/400x300/333333/FFFFFF?text=Contact+Us" alt="Contact Us" class="rounded-xl shadow-xl">
                 </div>
             </div>
         </div>
