@@ -40,13 +40,18 @@
 
     <!-- Header Section -->
     <header class="bg-black text-white py-8 shadow-lg">
-        <!-- Flex container for logo and centered text -->
-        <div class="container mx-auto px-4 flex items-center relative">
+        <!-- Flex container for logo and centered text - Responsive layout -->
+        <!-- On small screens (mobile), items stack vertically (flex-col). On larger screens (sm: upwards), they align horizontally (sm:flex-row) -->
+        <div class="container mx-auto px-4 flex flex-col sm:flex-row items-center justify-between">
             <!-- Company Logo - Sized and left-aligned -->
-            <img src="https://raw.githubusercontent.com/KashishThadani/techwiz-profile/main/blackbglogo.jpg" alt="Techwiz Solution Logo" class="rounded-lg h-24 w-auto mr-4">
+            <!-- flex-shrink-0 ensures logo doesn't shrink on smaller screens. mb-4 adds margin bottom for mobile stacking -->
+            <div class="flex-shrink-0 mb-4 sm:mb-0">
+                <img src="https://raw.githubusercontent.com/KashishThadani/techwiz-profile/main/blackbglogo.jpg" alt="Techwiz Solution Logo" class="rounded-lg h-24 w-auto">
+            </div>
 
-            <!-- Centered company name and line - positioned absolutely to center horizontally -->
-            <div class="absolute inset-x-0 text-center pointer-events-none">
+            <!-- Centered company name and line - takes available space and centers its content -->
+            <!-- flex-grow allows this div to take up remaining space. text-center centers its content -->
+            <div class="flex-grow text-center">
                 <h1 class="text-5xl font-extrabold mb-2 leading-tight">Techwiz Solution</h1>
                 <p class="text-xl italic">Your Journey to a Profitable E-commerce Business</p>
             </div>
