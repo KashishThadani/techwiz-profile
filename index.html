@@ -34,10 +34,16 @@
 
     <!-- Header Section -->
     <header class="bg-gradient-to-r from-blue-700 to-indigo-800 text-white py-8 shadow-lg">
-        <div class=container mx-auto px-4 text-left">
-            <img src="https://raw.githubusercontent.com/KashishThadani/techwiz-profile/main/logo.jpg" alt="Techwiz Solution Logo" class="mb-4 rounded-lg h-16 w-auto">
-            <h1 class="text-5xl font-extrabold mb-2 leading-tight">Techwiz Solution</h1>
-            <p class="text-xl italic">Your Journey to a Profitable E-commerce Business</p>
+        <!-- Flex container for logo and centered text -->
+        <div class="container mx-auto px-4 flex items-center relative">
+            <!-- Company Logo - Smaller and left-aligned -->
+            <img src="https://raw.githubusercontent.com/KashishThadani/techwiz-profile/main/blackbglogo.jpg" alt="Techwiz Solution Logo" class="rounded-lg h-20 w-auto mr-4">
+
+            <!-- Centered company name and line - positioned absolutely to center horizontally -->
+            <div class="absolute inset-x-0 text-center pointer-events-none">
+                <h1 class="text-5xl font-extrabold mb-2 leading-tight">Techwiz Solution</h1>
+                <p class="text-xl italic">Your Journey to a Profitable E-commerce Business</p>
+            </div>
         </div>
     </header>
 
